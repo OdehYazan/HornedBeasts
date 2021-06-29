@@ -62,7 +62,7 @@
 } 
 .Card{
 display: inline-block;
-margin-left: 30px;
+margin-left: 40px;
 margin-top:30px;
 }
 .Card img{
@@ -70,7 +70,16 @@ margin-top:30px;
   height:218px;
 }
 #description{
-  height: 70px;
+  height: 75px;
 }
-
+span{
+  display: inline-block;
+  width:95px;
+}
+/* #dislike{
+  color:red
+}
+.btn btn-primary{
+  color:red
+} */
 
