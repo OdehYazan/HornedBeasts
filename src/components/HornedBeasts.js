@@ -47,7 +47,7 @@ class HornedBeasts extends React.Component {
                     <Card.Text>
                         👍 {this.state.numberOfLikes}   <span></span>     {this.state.numberOfDislikes} 👎
                     </Card.Text>
-                    <Button onClick={this.likeNumbers} variant="primary">like 👍</Button> <Button id='dislike' onClick={this.dislikeNumbers} variant="primary">Dislike👎</Button>
+                    <Button onClick={this.likeNumbers} variant="primary">like 👍</Button> <Button id='dislike' onClick={this.dislikeNumbers} variant="danger">Dislike👎</Button>
                 </Card.Body>
             </Card>
 
