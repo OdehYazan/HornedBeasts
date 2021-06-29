@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.card{
+/* .card{
   display: inline-block;
   margin-left: 70px;
   width:350px;
@@ -57,3 +57,29 @@
 .head h1{
   text-align: center;
 }
+.footer h4,h5{
+  text-align: center;
+} 
+.Card{
+display: inline-block;
+margin-left: 40px;
+margin-top:30px;
+}
+.Card img{
+  width: 286px;
+  height:218px;
+}
+#description{
+  height: 75px;
+}
+span{
+  display: inline-block;
+  width:95px;
+}
+/* #dislike{
+  color:red
+}
+.btn btn-primary{
+  color:red
+} */
+

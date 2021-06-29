@@ -1,15 +1,57 @@
-import React from 'react';
-class HornedBeasts extends React.Component{
-    render(){
-        return(
-            <div className='card'>
-                <h2>{this.props.title}</h2>
-                <img src={this.props.src} alt={this.props.title}/>
-                <p>{this.props.description} </p>
 
-            </div>
+import React from 'react';
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+
+
+class HornedBeasts extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            numberOfLikes: 0,
+            numberOfDislikes: 0
+        }
+    }
+
+     // function to count the clicks on the like button
+    likeNumbers = () => {
+        this.setState({
+            numberOfLikes: this.state.numberOfLikes + 1
+        })
+    }
+
+     // function to count the clicks on the Dislike button
+    dislikeNumbers = () => {
+        this.setState({
+            numberOfDislikes: this.state.numberOfDislikes + 1
+        })
+    }
+    render() {
+        return (
+            // <div className='card'>
+
+            //     <h2>{this.props.title}</h2>
+            //     <img src={this.props.imgUrl} alt={this.props.title}/>
+            //     <p>{this.props.description} </p>
+
+            // </div>
+
+            <Card className='Card' style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={this.props.imgUrl} alt={this.props.title} />
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text id='description'>
+                        {this.props.description}
+                    </Card.Text>
+                    <Card.Text>
+                        👍 {this.state.numberOfLikes}   <span></span>     {this.state.numberOfDislikes} 👎
+                    </Card.Text>
+                    <Button onClick={this.likeNumbers} variant="primary">like 👍</Button> <Button id='dislike' onClick={this.dislikeNumbers} variant="danger">Dislike👎</Button>
+                </Card.Body>
+            </Card>
+
         )
     }
 }
-
 export default HornedBeasts;
